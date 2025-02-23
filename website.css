@@ -92,11 +92,11 @@ table {
 	border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
 
 /* Universal settings */
 * {
-    font-family: 'Comic Neue', cursive;
+    font-family: "Comic Sans MS", 'Chalkboard SE', 'Kanit', sans-serif;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -109,22 +109,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  font-family: 'Comic Neue', cursive;
   background-color: #f0f8ff;
     min-height: 100vh;
   color: #333;
   line-height: 1.5;
-    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFwOXliMGd5NGN0dGZ5cDJ6bTNtc2tzOXR4d24xdWQ1OWZpY2Y5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lCP95tGSbMmWI/giphy.gif'); /* Replace with a hosted tiled GIF or pattern */u
+    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFwOXliMGd5NGN0dGZ5cDJ6bTNtc2tzOXR4d24xdWQ1OWZpY2Y5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lCP95tGSbMmWI/giphy.gif'); /* Replace with a hosted tiled GIF or pattern */
     background-repeat: repeat;
     background-color: #87CEEB; /* Classic sky blue background */
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 250, 210, 0.93);
+}
+
 header {
     display: flex;
+    align-self: center;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.67);
+    border-radius: 10px;
 }
 
 h1, h2 {
@@ -174,10 +183,47 @@ b {
     font-weight: bold;
 }
 
+#anmalan-button-cntr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 2%;
+    background-color: #f7f7f7; /* Soft background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space from the top element */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#anmalan-button-cntr:hover {
+    background-color: #e0e0e0; /* Slight change on hover */
+}
+
+.anmalan-button-cntr button {
+    padding: 10px 20px; /* Add space inside the button */
+    font-size: 16px; /* Text size */
+    font-weight: 600; /* Make text bold */
+    color: white; /* Button text color */
+    background-color: #007BFF; /* Button color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth button transitions */
+}
+
+.anmalan-button-cntr button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.anmalan-button-cntr button:active {
+    transform: translateY(1px); /* Button presses down */
+}
+
 @media (max-width: 1023px) {
     /* Mobile */
     header {
-        margin-top: 3%;
         padding: 2% 0 0 0;
     }
 
@@ -187,7 +233,6 @@ b {
     
     main {
         padding: 1%;
-        margin: 1%;
     }
     
     main > * {
@@ -207,7 +252,6 @@ b {
     #event-descript {
         margin: 2%;
         padding: 4%;
-        background-color: #DAFDBA;
     }
 
     #event-descript > * {
@@ -218,16 +262,18 @@ b {
     #event-details {
         margin: 2%;
         padding: 4%;
-        background-color: #9AEBA3;
     }
 }
 
-@media (min-width: 1024px) {    
+@media (min-width: 1024px) {   
+    body {
+
+        min-height: 100vh;
+    } 
     /* Desktop */
     header {
         padding: 2%;
-        width: 50%;
-        margin-top: 1.5%;
+        width: 100%;
     }
 
     h1 {
@@ -241,12 +287,10 @@ b {
     main {
         width: 75%;
         padding: 1%;
-        margin: 2%;
     } 
 
     #event-descript {
         padding: 0.5%;
-        background-color: #DAFDBA;
     }
 
     #event-descript > * {
@@ -257,7 +301,8 @@ b {
     #event-details {
         margin-top: 3%;
         padding: 4%;
-        background-color: #9AEBA3;
+        background: rgba(170, 0, 80, 0.15);
+        border-radius: 10px;
     }
 
 }
